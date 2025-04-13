@@ -21,7 +21,7 @@ def crawl_ebay(search_query, max_items):
         }
         
         try:
-            response = requests.get(base_url, params=params, headers=headers, timeout=10)
+            response = requests.get(base_url, params=params, headers=headers, timeout=30)
             if response.status_code != 200:
                 return {"error": f"페이지 {page} 요청 실패: {response.status_code}"}
                 
